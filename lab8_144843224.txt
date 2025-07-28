@@ -1,0 +1,31 @@
+
+PLAY [Configure OPS445 CentOS VM] **********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [vmlab]
+
+TASK [Ensure Apache is updated] ************************************************
+ok: [vmlab]
+
+TASK [Install EPEL repository] *************************************************
+ok: [vmlab]
+
+TASK [Remove 'tree' package] ***************************************************
+changed: [vmlab]
+
+TASK [Set hostname] ************************************************************
+ok: [vmlab]
+
+TASK [Create user] *************************************************************
+ok: [vmlab]
+
+TASK [Create .ssh directory] ***************************************************
+ok: [vmlab]
+
+TASK [Copy authorized_keys to new user] ****************************************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+fatal: [vmlab]: FAILED! => {"changed": false, "msg": "Could not find or access '/home/rghorsaini/ops445/lab8/keys/authorized_keys' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+
+PLAY RECAP *********************************************************************
+vmlab                      : ok=7    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
